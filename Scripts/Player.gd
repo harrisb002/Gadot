@@ -72,3 +72,8 @@ func _on_Player_body_entered(body):
 	# Disable the player’s collision to not trigger the hit signal more than once.
 	$CollisionShape2D.set_deferred("disabled", true)
 	
+# Reset the player when starting a new game.
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
