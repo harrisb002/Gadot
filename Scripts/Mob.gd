@@ -7,7 +7,7 @@ var mob_types = ["walk", "swim", "fly"]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 # Random value between min_speed and max_speed for how fast each mob will move
-	$AnimatedSprite.animation = mob_types[randi() % mob_types.size()]
+	$AnimatedSprite2D.animation = mob_types[randi() % mob_types.size()]
 
 # Must use randomize() if you want your sequence of 
 #   “random” numbers to be different every time you run the scene. 

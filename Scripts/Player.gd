@@ -66,7 +66,7 @@ func _process(delta):
 		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.flip_v = velocity.y > 0
 
-func _on_Player_body_entered(body):
+func _on_body_entered(body):
 	hide()  # Player disappears after being hit.
 	emit_signal("hit")
 	# Disable the player’s collision to not trigger the hit signal more than once.
